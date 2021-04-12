@@ -28,7 +28,7 @@ int main(void) {
 	tmpA = PINA;
 	tmpB = PINB;
 	tmpC = PINC;
-	tmpD = (tmpA + tmpB + tmpC) & 0xFC;
+	tmpD = ((tmpA + tmpB + tmpC) >> 2) & 0xFC;
 	if((tmpA + tmpB + tmpC) > 0x8C){
 		tmpD = tmpD + 1;
 	}
